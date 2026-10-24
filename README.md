@@ -14,4 +14,4 @@ Weekend_Extra_Hours- is needed to determine how much time students spend on soci
 
 
   
-3. What is the average academic performance of women over 20 years old that spend more time than average social media time 
+2. What is the average academic performance of women over 20 years old that spend more time than average social media time 
