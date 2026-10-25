@@ -30,7 +30,7 @@ I think this topic is important because students' mental health may be related t
 
 This topic is suitable for algorithmic analysis because it involves several variables and requires comparing information from different students. An algorithm can group students according to their primary social media platform, calculate the average stress level for each platform, and identify which platform is associated with the highest average stress level. It can also calculate the average number of hours students spend on that platform during weekdays and weekends. This will help us identify patterns in the data and develop a better understanding of the relationship between social media usage and stress levels. (Mahitab)
   
-
+_________________________________________________________________
 Bibifatemeh 
-_____________________
+_________________________________________________________________
 2.To what extent do daily social media usage, sleep duration, and sleep quality jointly predict students’ GPA, and which of these factors has the strongest independent association with academic performance?
