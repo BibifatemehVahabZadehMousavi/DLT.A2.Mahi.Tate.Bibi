@@ -109,7 +109,14 @@ nav a[aria-current="page"] {
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
-
+.Normalp {
+  margin: 0 0 0.5rem;
+  color: var(--green-dark);
+  font-family: Arial, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
 .button-link {
   display: inline-block;
   margin-top: 0.7rem;
