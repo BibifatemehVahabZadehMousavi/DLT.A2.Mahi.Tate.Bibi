@@ -11,7 +11,9 @@ We decide together that each group member formulate a research question and toge
 What problem do we want to solve?
 ****************************************
 
-(Tatevik) 1. Which social media platform is associated with the highest stress levels among female students, and how many hours do users spend on that platform on weekdays and weekends? 
+(Tatevik)
+________________________
+1. Which social media platform is associated with the highest stress levels among female students, and how many hours do users spend on that platform on weekdays and weekends? 
    
   I am proposing this problem because it is well suited for algorithmic analysis. It combines different aspects of social media usage and stress into one research question. The problem requires several variables and a relatively large dataset, which makes the analysis more challenging and interesting. It also addresses a topic that is relevant to many students and may help us better understand the relationship between social media use and stress. The algorithm should identify the social media platform with the highest average stress level among female students. It should also calculate the average number of hours users spend on that platform during weekdays and weekends.
 
