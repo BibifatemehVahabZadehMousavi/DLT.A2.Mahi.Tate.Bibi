@@ -294,14 +294,9 @@ nav a[aria-current="page"] {
     gap: 0.25rem 0.9rem;
   }
 
-  .activity-table th,
-  .activity-table td {
-    padding: 0.5rem;
-  }
-
   .fields-table th,
   .fields-table td {
-    padding: 0 0.5rem;
+    padding: 0 0.1rem;
   }
 
   .page-content {
