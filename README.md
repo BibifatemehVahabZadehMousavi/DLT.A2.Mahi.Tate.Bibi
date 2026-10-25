@@ -21,7 +21,7 @@ This makes it interesting to investigate whether these commonly discussed factor
 By applying multiple linear regression, the study can investigate how each of the three factors is associated with GPA while accounting for the other two factors. The analysis can also evaluate how well the three variables jointly predict academic performance. This approach is appropriate because it connects a familiar real-world question with measurable evidence, allowing common assumptions about students’ habits and academic outcomes to be examined systematically.
 However, because the dataset is observational, the analysis can identify associations and predictive relationships rather than establish that these habits directly cause changes in GPA.
 
-
+(Mahitab)How Does Social Media Usage Affect the Mental Health and Academic Performance of Female Students?
 
 
 --------------------
