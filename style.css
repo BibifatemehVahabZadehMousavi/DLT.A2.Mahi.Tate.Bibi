@@ -113,8 +113,8 @@ nav a[aria-current="page"] {
   margin: 0 0 0.5rem;
   color: var(--green-dark);
   font-family: Arial, sans-serif;
-  font-size: 0.78rem;
-  letter-spacing: 0.08em;
+  font-size: 0.70rem;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
 }
 .button-link {
