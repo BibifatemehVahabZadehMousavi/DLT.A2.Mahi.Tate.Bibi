@@ -154,214 +154,82 @@ nav a[aria-current="page"] {
   font-size: 0.9rem;
 }
 
-.memory-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.memory-card {
-  margin: 0;
-  padding: 0.7rem;
-  border: 1px solid var(--line);
+.bulletin {
+  position: relative;
+  margin-top: 2.5rem;
+  padding: 1.25rem 1.5rem;
   background: #fffdf8;
 }
 
-.memory-card img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+.bulletin-sketch {
+  position: absolute;
+  inset: -5px;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  overflow: visible;
+  pointer-events: none;
 }
 
-.memory-card figcaption {
-  padding-top: 0.55rem;
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.physics-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.physics-card {
-  margin: 0;
-  padding: 1rem;
-  border: 1px solid var(--line);
-  background: #fffdf8;
-}
-
-.physics-card svg {
-  display: block;
-  width: 20mm;
-  height: 20mm;
-  margin: 0 auto 0.8rem;
-  border: 1px solid var(--line);
-  background: #fff;
-}
-
-.physics-card figcaption {
-  color: var(--muted);
-  font-size: 0.95rem;
-}
-
-.physics-card figcaption strong {
-  display: block;
-  margin-bottom: 0.25rem;
-  color: var(--ink);
-}
-
-.physics-diagram .wire {
-  fill: none;
-  stroke: var(--ink);
-  stroke-width: 3;
-}
-
-.physics-diagram .charge-positive {
-  fill: #f5d9cf;
-  stroke: #a94d38;
-  stroke-width: 3;
-}
-
-.physics-diagram .charge-negative {
-  fill: #dce9f4;
-  stroke: #376b91;
-  stroke-width: 3;
-}
-
-.physics-diagram .force {
+.bulletin-sketch path {
   fill: none;
   stroke: var(--coral);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.bulletin-sketch .bulletin-sketch-shadow {
+  stroke: #e8d8c9;
   stroke-width: 3;
 }
 
-.physics-diagram .component {
-  fill: #fffdf8;
-  stroke: var(--green-dark);
-  stroke-width: 3;
-}
-
-.physics-diagram .label {
-  fill: var(--ink);
-  font-family: Arial, sans-serif;
-  font-size: 11px;
-  text-anchor: middle;
-}
-
-.physics-diagram .accent-label {
-  fill: var(--green-dark);
-  font-family: Arial, sans-serif;
-  font-size: 11px;
-  font-weight: bold;
-  text-anchor: middle;
-}
-
-.lesson-card {
-  margin-top: 1.5rem;
-  padding: clamp(1rem, 3vw, 1.5rem);
-  border: 1px solid var(--line);
-  background: #fffdf8;
-}
-
-.lesson-card h2 {
+.bulletin h2 {
   margin-top: 0;
-  font-weight: normal;
 }
 
-.lesson-diagram {
-  display: block;
-  width: 100%;
-  max-width: 680px;
-  height: auto;
-  margin: 1rem auto;
-  border: 1px solid var(--line);
-  background: #fff;
+.bulletin p {
+  margin-bottom: 0;
 }
 
-.lesson-diagram text {
-  fill: var(--ink);
+.site-footer {
+  padding: 1rem 1.25rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
   font-family: Arial, sans-serif;
-  font-size: 13px;
-}
-
-.lesson-diagram .diagram-heading {
-  fill: var(--green-dark);
-  font-size: 14px;
-  font-weight: bold;
-}
-
-.lesson-diagram .diagram-small {
-  font-size: 11px;
-}
-
-.lesson-diagram .diagram-white {
-  fill: #fff;
-}
-
-.lesson-diagram .diagram-line {
-  fill: none;
-  stroke: var(--ink);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 3;
-}
-
-.lesson-diagram .diagram-force {
-  fill: none;
-  stroke: var(--coral);
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 4;
-}
-
-.lesson-diagram .diagram-positive {
-  fill: #f5d9cf;
-  stroke: #a94d38;
-  stroke-width: 3;
-}
-
-.lesson-diagram .diagram-negative {
-  fill: #dce9f4;
-  stroke: #376b91;
-  stroke-width: 3;
-}
-
-.lesson-diagram .diagram-electron {
-  fill: #376b91;
-  stroke: white;
-  stroke-width: 1.5;
-}
-
-.lesson-takeaway {
-  padding: 0.8rem 1rem;
-  border-left: 3px solid var(--green);
-  background: #eaf0e7;
-}
-
-.lesson-equation {
+  font-size: 0.85rem;
   text-align: center;
-  font-size: 1.25rem;
 }
 
-.activity-table {
+.site-footer p {
+  margin: 0;
+}
+.fields-table-wrapper {
+  overflow-x: auto;
+}
+
+.fields-table {
   width: 100%;
   margin-top: 1rem;
   border-collapse: collapse;
   text-align: left;
 }
 
-.activity-table th,
-.activity-table td {
-  padding: 0.7rem;
-  border: 1px solid var(--line);
+.fields-table th,
+.fields-table td {
+  padding: 0 0.8rem;
+  border: 0;
+  font-size: 10pt;
+  vertical-align: top;
 }
 
-.activity-table th {
-  background: #eaf0e7;
+.fields-table th {
+  color: var(--green-dark);
+  font-family: Arial, sans-serif;
+}
+
+.fields-table code {
+  font-family: "Courier New", monospace;
 }
 
 .bulletin {
@@ -429,6 +297,11 @@ nav a[aria-current="page"] {
   .activity-table th,
   .activity-table td {
     padding: 0.5rem;
+  }
+
+  .fields-table th,
+  .fields-table td {
+    padding: 0 0.5rem;
   }
 
   .page-content {
