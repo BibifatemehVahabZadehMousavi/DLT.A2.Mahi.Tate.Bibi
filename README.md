@@ -2,7 +2,7 @@
 Data logical thinking assignment 2 Mahitab Tatevik Bibifatemeh
 
 https://www.kaggle.com/datasets/harishyadav0506/impact-of-social-media-on-life
-
+We decide together that each group member formulate a research question and together  choose one then we share the tasks and work according our task.
 What problem do we want to solve?
 (Tatevik) 1. Which social media platform is associated with the highest stress levels among female students, and how many hours do users spend on that platform on weekdays and weekends? 
    
@@ -22,5 +22,5 @@ I think this topic is important because students' mental health may be related t
 
 This topic is suitable for algorithmic analysis because it involves several variables and requires comparing information from different students. An algorithm can group students according to their primary social media platform, calculate the average stress level for each platform, and identify which platform is associated with the highest average stress level. It can also calculate the average number of hours students spend on that platform during weekdays and weekends. This will help us identify patterns in the data and develop a better understanding of the relationship between social media usage and stress levels. (Mahitab)
   
-2. What is the average academic performance of women over 20 years old that spend more time than average social media time 
+
 
