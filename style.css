@@ -19,6 +19,7 @@ body {
   background: var(--paper);
   color: var(--ink);
   font-family: Arial, serif;
+  font-size: 0.8rem;
   line-height: 1.65;
 }
 
@@ -99,8 +100,6 @@ nav a[aria-current="page"] {
 .eyebrow {
   margin: 0 0 0.5rem;
   color: var(--green-dark);
-  font-family: Arial, sans-serif;
-  font-size: 0.78rem;
   font-weight: bold;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -108,8 +107,7 @@ nav a[aria-current="page"] {
 .normalp {
   margin: 0 0 0.5rem;
   color: var(--green-dark);
-  font-family: Arial, sans-serif;
-  font-size: 0.73rem;
+  font-size: 0.78rem;
   letter-spacing: 0.08em;
 }
 .button-link {
@@ -198,7 +196,6 @@ nav a[aria-current="page"] {
   padding: 1rem 1.25rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-family: Arial, sans-serif;
   font-size: 0.85rem;
   text-align: center;
 }
@@ -211,7 +208,6 @@ nav a[aria-current="page"] {
 }
 
 .fields-table {
-  font-family: Arial, sans-serif;
   width: 100%;
   margin-top: 1rem;
   border-collapse: collapse;
@@ -277,7 +273,6 @@ nav a[aria-current="page"] {
   padding: 1rem 1.25rem;
   border-top: 1px solid var(--line);
   color: var(--muted);
-  font-family: Arial, sans-serif;
   font-size: 0.85rem;
   text-align: center;
 }
