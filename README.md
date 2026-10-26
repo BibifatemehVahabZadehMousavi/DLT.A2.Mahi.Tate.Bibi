@@ -6,7 +6,7 @@ https://www.kaggle.com/datasets/harishyadav0506/impact-of-social-media-on-life
 
 Why do we chose this dataset?
 
-(Mahitab) The topic of social media usage is very interesting to me because I am also a social media user. Social media is a part of everyday life, and different platforms may attract different groups of female students. Their usage habits and stress levels may differ from one platform to another. I find it interesting to investigate how much time students spend on each platform and whether this is associated with their stress levels. I am also curious about how social media usage changes between weekdays and weekends, and whether students spend more or less time on these platforms during the weekends. 
+(Mahitab) The topic of social media usage is very interesting to us because we are all  social media users also. Social media is a part of everyday life, and different platforms may attract different groups of female students. Their usage habits and stress levels may differ from one platform to another. we find it interesting to investigate how much time students spend on each platform and whether this is associated with their stress levels. the team share curiosity about how social media usage changes between weekdays and weekends, and whether students spend more or less time on these platforms during the weekends. 
 
 We decided together to formulate their own research question and then choose one by voting.
 
