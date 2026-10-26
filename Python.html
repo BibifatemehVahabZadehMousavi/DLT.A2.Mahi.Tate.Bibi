@@ -1,1 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Python code - test2.py</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Consolas, "Courier New", monospace;
+      background: #000;
+      color: #d4d4d4;
+    }
+
+    body {
+      margin: 0;
+      padding: 24px;
+      background: #000;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      color: #e6e6e6;
+      font: 600 16px/1.4 system-ui, sans-serif;
+    }
+
+    pre {
+      box-sizing: border-box;
+      max-width: 100%;
+      margin: 0;
+      padding: 18px 20px;
+      overflow: auto;
+      border: 1px solid #333;
+      border-radius: 6px;
+      background: #000;
+      font: 14px/1.55 Consolas, "Courier New", monospace;
+      tab-size: 4;
+    }
+
+    code { color: #d4d4d4; }
+    .keyword { color: #c586c0; }
+    .string { color: #ce9178; }
+    .comment { color: #6a9955; }
+    .number { color: #b5cea8; }
+    .builtin { color: #dcdcaa; }
+    .operator { color: #d4d4d4; }
+  </style>
+</head>
+<body>
+  <h1>test2.py</h1>
+  <pre><code id="code"></code></pre>
+
+  <script type="text/plain" id="source">import csv
+import math
+import statistics
+from itertools import groupby
+
+
+filename = r"C:\Users\Leila\Desktop\archive\Social_media_impact_on_life.csv"
+
+comparison_codes = {
+    "never": 1,
+    "rarely": 2,
+    "sometimes": 3,
+    "often": 4,
+    "always": 5,
+}
+late_night_codes = {
+    "true": 1,
+    "yes": 1,
+    "1": 1,
+    "false": 0,
+    "no": 0,
+    "0": 0,
+}
+
+
+def load_records(path):
+    records = []
+    with open(path, encoding="utf-8-sig", newline="") as file:
+        for row in csv.DictReader(file):
+            try:
+                stress = float(row["Perceived_Stress_Score"])
+                hours = float(row["Daily_Usage_Hours"])
+                late = late_night_codes[row["Late_Night_Usage"].strip().lower()]
+                comparison = comparison_codes[row["Social_Comparison_Frequency"].strip().lower()]
+            except (ValueError, TypeError, KeyError, AttributeError):
+                continue
+
+            if all(map(math.isfinite, (stress, hours, late, comparison))):
+                records.append((stress, hours, late, comparison))
+
+    return records
+
+
+def average_ranks(values):
+    ranked = [0.0] * len(values)
+    ordered = sorted(enumerate(values), key=lambda item: item[1])
+
+    start = 0
+    for _, tied_values in groupby(ordered, key=lambda item: item[1]):
+        tied_values = list(tied_values)
+        average_rank = (start + 1 + start + len(tied_values)) / 2
+        for index, _ in tied_values:
+            ranked[index] = average_rank
+        start += len(tied_values)
+
+    return ranked
+
+
+def correlation_or_none(x, y):
+    if len(x) < 2 or len(set(x)) < 2 or len(set(y)) < 2:
+        return None
+    return statistics.correlation(x, y)
+
+
+records = load_records(filename)
+
+if len(records) < 2:
+    print("Not enough valid data.")
+else:
+    stress, daily_hours, late_night, comparison = map(list, zip(*records))
+    correlations = [
+        correlation_or_none(daily_hours, stress),
+        correlation_or_none(late_night, stress),
+        correlation_or_none(average_ranks(comparison), average_ranks(stress)),
+    ]
+    names = [
+        "Daily usage Hours",
+        "Late-night usage",
+        "Social comparison frequency",
+    ]
+
+    print("Valid students:", len(records))
+    print()
+    for name, value in zip(
+        ("Daily usage duration", "Late-night usage", "Social comparison frequency"),
+        correlations,
+    ):
+        print(f"{name}: {value}")
+
+    available = [
+        (index, value)
+        for index, value in enumerate(correlations)
+        if value is not None and math.isfinite(value)
+    ]
+    if not available:
+        print("Could not calculate the correlations.")
+    else:
+        best_index, best_value = max(available, key=lambda item: abs(item[1]))
+        print()
+        print("Strongest observed association:", names[best_index])
+        print("Correlation coefficient:", round(best_value, 3))</script>
+  <script>
+    const source = document.getElementById("source").textContent.replace(/\r\n/g, "\n");
+    const tokenPattern = /(#.*)|((?:[rRuUbBfF]{1,2})?(?:"""[\s\S]*?"""|'''[\s\S]*?'''|"(?:\\.|[^"\\])*"|'(?:\\.|[^'\\])*'))|(\b\d+(?:\.\d+)?(?:[eE][+-]?\d+)?\b)|(\b(?:False|None|True|and|as|assert|async|await|break|class|continue|def|del|elif|else|except|finally|for|from|global|if|import|in|is|lambda|nonlocal|not|or|pass|raise|return|try|while|with|yield)\b)|(\b(?:abs|all|any|bool|dict|enumerate|float|int|len|list|map|max|min|open|print|range|set|sorted|str|sum|tuple|zip)\b)|([+\-*/%=<>!&|^~]+)|([()[\]{},.:;])/gm;
+    const escaped = (text) => text.replace(/[&<>"']/g, (char) => ({
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#39;",
+    })[char]);
+    const classes = ["comment", "string", "number", "keyword", "builtin", "operator", ""];
+    let html = "";
+    let lastIndex = 0;
+
+    for (const match of source.matchAll(tokenPattern)) {
+      html += escaped(source.slice(lastIndex, match.index));
+      const token = match[0];
+      const groupIndex = match.findIndex((value, index) => index > 0 && value !== undefined);
+      const className = classes[groupIndex - 1];
+      html += className ? `<span class="${className}">${escaped(token)}</span>` : escaped(token);
+      lastIndex = match.index + token.length;
+    }
+
+    html += escaped(source.slice(lastIndex));
+    document.getElementById("code").innerHTML = html;
+  </script>
+</body>
+</html>
 
