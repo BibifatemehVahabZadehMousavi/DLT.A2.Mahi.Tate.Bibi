@@ -1,95 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Assignment 2: Design Algorithms">
-	<title>Impact of social Media</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Assignment 2: Design Algorithms">
+    <title>Impact of Social Media</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header class="site-header">
-		<a class="site-name" href="index.html"> Data logical thinking: Assignment 2 </a>
-		<nav aria-label="Main navigation">
-			<a href="index.html" aria-current="page">Home</a>
-			<a href="dataset.html">Dataset</a>
-			<a href="algorithm.html">Algorithm</a>
-			<a href="People.html">To know how we worked</a>
-		</nav>
-	</header>
+    <header class="site-header">
+        <a class="site-name" href="index.html">
+            Data logical thinking: Assignment 2
+        </a>
 
-	<main class="page-content">
-		<section class="welcome" aria-labelledby="welcome-title">
-			<h1 id="title">Impact of Social Media</h1>
-			<p>Social media is a part of everyday life, and different platforms may attract different groups of female students. Their usage habits and stress levels may differ from one platform to another. I find it interesting to investigate how much time students spend on each platform and whether this is associated with their stress levels. I am also curious about how social media usage changes between weekdays and weekends, and whether students spend more or less time on these platforms during the weekends. </p>
-			<section class="content-section" aria-labelledby="fields-title">
-			  <p class="normalp">The  primary dataset provides survey metrics across 4,500 students ranging from high school to postgraduate programs to analyze how digital engagement shapes daily life and well-being.
-Dataset  dictionary</p>
-			   <h1 id="fields-title" class="eyebrow">Field definitions</h1>
-		      <div class="fields-table-wrapper">
-		        <table class="fields-table">
-		          <thead>
-		            <tr>
-		              <th scope="col">Field name</th>
-		              <th scope="col">Type</th>
-		              <th scope="col">Description</th>
-		            </tr>
-		          </thead>
-		          <tbody>
-		            <tr>
-		              <td><code>Student_ID</code></td>
-		              <td>string</td>
-		              <td>Unique identifier for each participant</td>
-		            </tr>
-		            <tr>
-		              <td><code>Age</code></td>
-		              <td>integer</td>
-		              <td>Participant age (15 to 26 years)</td>
-		            </tr>
-		            <tr>
-		              <td><code>Gender</code></td>
-		              <td>string</td>
-		              <td>Self-reported gender category</td>
-		            </tr>
-		            <tr>
-		              <td><code>Academic_Level</code></td>
-		              <td>string</td>
-		              <td>High School, Undergraduate, or Postgraduate</td>
-		            </tr>
-		            <tr>
-		              <td><code>Primary_Platform</code></td>
-		              <td>string</td>
-		              <td>Most frequently consumed digital platform</td>
-		            </tr>
-		            <tr>
-		              <td><code>Daily_Usage_Hours</code></td>
-		              <td>float</td>
-		              <td>Average daily social media screen time (hours)</td>
-		            </tr>
-		            <tr>
-		              <td><code>Weekend_Extra_Hours</code></td>
-		              <td>float</td>
-		              <td>Supplementary screen time during weekends</td>
-		            </tr>
-		          </tbody>
-		        </table>
-		      </div>
-  		  </section>
-		</section>
+        <nav aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="dataset.html">Dataset</a>
+            <a href="algorithm.html">Algorithm</a>
+            <a href="People.html">To know how we worked</a>
+        </nav>
+    </header>
 
-		<section class="content-section" aria-labelledby="start-title">
-			<h2 id="start-title">Start exploring</h2>
-			<ul class="link-list">
-				<li><a href="dataset.html">Dataset</a></li>
-				<li><a href="algorithm.html">Algorithm</a></li>
-				<li><a href="People.html">To know how we worked...</a></li>
-			</ul>
-		</section>
-	</main>
+    <main class="page-content">
 
-	<footer class="site-footer">
-		<p>&copy; 2026  Assignment 2          Tatevik, Mahitab, Bibifatemeh</p>
-	</footer>
+        <section class="welcome" aria-labelledby="welcome-title">
+            <h1 id="welcome-title">Impact of Social Media</h1>
+
+            <p>
+                Social media is a part of everyday life, and different
+                platforms may attract different groups of students.
+                Their usage habits and stress levels may differ from
+                one platform to another. We find it interesting to
+                investigate how social media habits are associated
+                with students' stress levels. We are particularly
+                interested in daily usage duration, late-night usage,
+                and social comparison.
+            </p>
+        </section>
+
+        <section class="content-section" aria-labelledby="dataset-intro-title">
+            <h2 id="dataset-intro-title">Our dataset</h2>
+
+            <p class="normalp">
+                The original dataset contains survey information about
+                students' social media habits and well-being. For our
+                analysis, we use the relevant variables to investigate
+                the relationship between social media habits and
+                perceived stress scores.
+            </p>
+
+            <h2 id="fields-title" class="eyebrow">Field definitions</h2>
+
+            <div class="fields-table-wrapper">
+                <table class="fields-table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Field name</th>
+                            <th scope="col">Type</th>
+                            <th scope="col">Description</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td><code>Student_ID</code></td>
+                            <td>String or identifier</td>
+                            <td>Unique identifier for each participant.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>Perceived_Stress_Score</code></td>
+                            <td>Numeric</td>
+                            <td>Participant's perceived stress score.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>Daily_Usage_Hours</code></td>
+                            <td>Numeric</td>
+                            <td>Daily social media usage duration in hours.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>Late_Night_Usage</code></td>
+                            <td>Boolean</td>
+                            <td>Indicates whether the participant uses social media late at night.</td>
+                        </tr>
+
+                        <tr>
+                            <td><code>Social_Comparison_Frequency</code></td>
+                            <td>Categorical</td>
+                            <td>How frequently the participant compares themselves with others on social media.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="content-section" aria-labelledby="research-title">
+            <h2 id="research-title">Our research question</h2>
+
+            <p>
+                Which of three social media habits—daily usage duration,
+                late-night usage, or frequency of social comparison—is
+                most strongly associated with students' perceived
+                stress scores?
+            </p>
+        </section>
+
+        <section class="content-section" aria-labelledby="algorithm-overview-title">
+            <h2 id="algorithm-overview-title">Our algorithm</h2>
+
+            <p>
+                Our algorithm reads the cleaned CSV dataset and prepares
+                the relevant variables for analysis. It converts social
+                comparison frequency into numeric values and late-night
+                usage into 1 or 0. Rows containing missing, invalid, or
+                unrecognized values are skipped.
+            </p>
+
+            <p>
+                The algorithm calculates three Pearson correlation
+                coefficients to examine the associations between daily
+                usage duration, late-night usage, and social comparison
+                frequency with perceived stress scores. It compares the
+                absolute values of these coefficients and identifies the
+                habit with the strongest linear association.
+            </p>
+
+            <p>
+                The results show associations in the data, not proof
+                that a social media habit causes stress.
+            </p>
+
+            <a class="button-link" href="algorithm.html">
+                Explore the algorithm
+            </a>
+        </section>
+
+        <section class="content-section" aria-labelledby="start-title">
+            <h2 id="start-title">Start exploring</h2>
+
+            <ul class="link-list">
+                <li><a href="dataset.html">Dataset</a></li>
+                <li><a href="algorithm.html">Algorithm</a></li>
+                <li><a href="People.html">To know how we worked...</a></li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Assignment 2 — Tatevik, Mahitab, Bibifatemeh</p>
+    </footer>
 </body>
 </html>
 
