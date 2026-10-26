@@ -35,7 +35,153 @@
 				<li><a href="People.html">To know how we worked</a></li>
 			</ul>
 		</section>
-	</main>
+		```html
+<section class="pseudocode">
+  <h2>Pseudocode: Social Media Habits and Perceived Stress</h2>
+
+  <pre><code>START
+
+SET filename to the CSV dataset path
+
+CREATE comparison_codes:
+    "never" = 1
+    "rarely" = 2
+    "sometimes" = 3
+    "often" = 4
+    "always" = 5
+
+CREATE late_night_codes:
+    "true", "yes", "1" = 1
+    "false", "no", "0" = 0
+
+
+FUNCTION load_records(filename):
+
+    CREATE empty list records
+    OPEN the CSV file
+    READ the dataset row by row
+
+    FOR each row in the dataset:
+
+        TRY:
+            CONVERT Perceived_Stress_Score to a number
+            CONVERT Daily_Usage_Hours to a number
+            CONVERT Late_Night_Usage to its numeric value
+            CONVERT Social_Comparison_Frequency
+                to its numeric value
+
+        IF any value is missing, invalid,
+        or unrecognized:
+            SKIP the row
+
+        OTHERWISE IF any numeric value is not finite:
+            SKIP the row
+
+        OTHERWISE:
+            ADD stress, hours, late_night,
+            and comparison to records
+
+    RETURN records
+
+
+FUNCTION average_ranks(values):
+
+    CREATE a rank list with one position per value
+    SORT values from smallest to largest
+    KEEP each value's original position
+
+    SET start = 0
+
+    FOR each group of equal values:
+
+        SET group_size to the number of tied values
+
+        CALCULATE average_rank:
+            (start + 1 + start + group_size) / 2
+
+        ASSIGN average_rank to each tied value
+        at its original position
+
+        INCREASE start by group_size
+
+    RETURN rank list
+
+
+FUNCTION correlation_or_none(x, y):
+
+    IF either list has fewer than 2 values:
+        RETURN unavailable
+
+    IF either list has only one distinct value:
+        RETURN unavailable
+
+    CALCULATE Pearson correlation between x and y
+
+    RETURN correlation coefficient
+
+
+SET records = load_records(filename)
+
+IF records contains fewer than 2 valid rows:
+
+    DISPLAY "Not enough valid data."
+
+OTHERWISE:
+
+    SEPARATE records into:
+        stress
+        daily_hours
+        late_night
+        comparison
+
+    CALCULATE daily_correlation:
+        correlation between daily_hours and stress
+
+    CALCULATE late_night_correlation:
+        correlation between late_night and stress
+
+    CALCULATE comparison_ranks:
+        average_ranks(comparison)
+
+    CALCULATE stress_ranks:
+        average_ranks(stress)
+
+    CALCULATE comparison_correlation:
+        correlation between comparison_ranks
+        and stress_ranks
+
+    DISPLAY number of valid students
+    DISPLAY all three correlation coefficients
+
+    CREATE empty list available
+
+    FOR each correlation coefficient:
+
+        IF the coefficient is available
+        AND finite:
+            ADD its position and value to available
+
+    IF available is empty:
+
+        DISPLAY "Could not calculate the correlations."
+
+    OTHERWISE:
+
+        FIND the coefficient with the largest
+        absolute value
+
+        IDENTIFY the corresponding social media habit
+
+        DISPLAY the strongest observed association
+        DISPLAY its coefficient rounded to 3 decimals
+
+        DISPLAY "Correlation shows association,
+        not causation."
+
+END</code></pre>
+</section>
+
+</main>
 
 	<footer class="site-footer">
 		<p>&copy; 2026  Assignment 2          Tatevik, Mahitab, Bibifatemeh</p>
