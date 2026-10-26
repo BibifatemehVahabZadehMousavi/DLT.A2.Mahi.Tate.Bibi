@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,128 +25,28 @@
     <main class="page-content">
 
         <section class="welcome" aria-labelledby="welcome-title">
-            <h1 id="welcome-title">Impact of Social Media</h1>
-             <h2>Introduction</h2>
+            <h1 id="welcome-title">Project Introduction</h1>
+            <h2>Impact of social media on life</h2>
 
             <p>
-                Social media is a part of everyday life, and different
-                platforms may attract different groups of students.
-                Their usage habits and stress levels may differ from
-                one platform to another. We find it interesting to
-                investigate how social media habits are associated
-                with students stress levels. We are particularly
-                interested in daily usage duration, late night usage,
-                and social media diffent platforms.
-            </p>
-        </section>
-
-        <section class="content-section" aria-labelledby="dataset-intro-title">
-            <h2 id="dataset-intro-title">Our dataset</h2>
-
-            <p class="normalp">
-                The original dataset contains survey information about
-                students' social media habits and well beings. For our
-                analysis, we use the relevant variables to measure
-                the relationship between social media habits and
-                perceived stress scores.
-            </p>
-
-            <h2 id="fields-title" class="eyebrow">Field definitions</h2>
-
-            <div class="fields-table-wrapper">
-                <table class="fields-table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Field name</th>
-                            <th scope="col">Type</th>
-                            <th scope="col">Description</th>
-                        </tr>
-                    </thead>
-
-                    <tbody>
-                        <tr>
-                            <td><code>Student_ID</code></td>
-                            <td>String or identifier</td>
-                            <td>Unique identifier for each participant.</td>
-                        </tr>
-
-                        <tr>
-                            <td><code>Perceived_Stress_Score</code></td>
-                            <td>Numeric</td>
-                            <td>Participant's perceived stress score.</td>
-                        </tr>
-
-                        <tr>
-                            <td><code>Daily_Usage_Hours</code></td>
-                            <td>Numeric</td>
-                            <td>Daily social media usage duration in hours.</td>
-                        </tr>
-
-                        <tr>
-                            <td><code>Late_Night_Usage</code></td>
-                            <td>Boolean</td>
-                            <td>Indicates whether the participant uses social media late at night.</td>
-                        </tr>
-
-                        <tr>
-                            <td><code>Social_Comparison_Frequency</code></td>
-                            <td>Categorical</td>
-                            <td>How frequently the participant compares themselves with others on social media.</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section>
-
-        <section class="content-section" aria-labelledby="research-title">
-            <h2 id="research-title">Our research question</h2>
-
-            <p>
-                Which of three social media habits—daily usage duration,
-                late-night usage, or frequency of social comparison—is
-                most strongly associated with students' perceived
-                stress scores?
-            </p>
-        </section>
-
-        <section class="content-section" aria-labelledby="algorithm-overview-title">
-            <h2 id="algorithm-overview-title">Our algorithm</h2>
-
-            <p>
-                Our algorithm reads the cleaned CSV dataset and prepares
-                the relevant variables for analysis. It converts social
-                comparison frequency into numeric values and late-night
-                usage into 1 or 0. Rows containing missing, invalid, or
-                unrecognized values are skipped.
+                This project is all about social media usage and its effect on female students. The topic of social media usage is very interesting to us because we are all social media users as well. Social media is a part of everyday life, and different platforms may attract different groups of female students. Their usage habits and stress levels may differ from one person to another. We find it interesting to investigate how much time students spend on social media and whether this is associated with their stress levels. The team shares a curiosity about how social media usage changes between weekdays and weekends, and whether students spend more or less time on these platforms during the weekends. In this project, we aim to investigate the number of hours students spend on social media each day, whether they use it late at night, and how using hours affect their stress score. By doing this project, we are trying to find a clue as to which habit has the strongest association with stress.
             </p>
 
             <p>
-                The algorithm calculates three Pearson correlation
-                coefficients to examine the associations between daily
-                usage duration, late-night usage, and social comparison
-                frequency with perceived stress scores. It compares the
-                absolute values of these coefficients and identifies the
-                habit with the strongest linear association.
+                Below, you can explore our project in more detail.
+                On the Dataset page, you can learn how we found,
+                cleaned, and structured the data. On the Algorithm
+                page, you can find our plain language explanation and
+                pseudocode. On the How We Worked page, you can read
+                about our teamwork, how we divided the tasks, and
+                how we made decisions.
             </p>
 
             <p>
-                The results show associations in the data, not proof
-                that a social media habit causes stress.
+                <a class="button-link" href="dataset.html">Explore Dataset</a>
+                <a class="button-link" href="algorithm.html">Explore Algorithm</a>
+                <a class="button-link" href="People.html">How We Worked</a>
             </p>
-
-            <a class="button-link" href="algorithm.html">
-                Explore the algorithm
-            </a>
-        </section>
-
-        <section class="content-section" aria-labelledby="start-title">
-            <h2 id="start-title">Exploring</h2>
-
-            <ul class="link-list">
-                <li><a href="dataset.html">Dataset</a></li>
-                <li><a href="algorithm.html">Algorithm</a></li>
-                <li><a href="People.html">To know how we worked...</a></li>
-            </ul>
         </section>
 
     </main>
@@ -155,4 +56,4 @@
     </footer>
 </body>
 </html>
-
+```
