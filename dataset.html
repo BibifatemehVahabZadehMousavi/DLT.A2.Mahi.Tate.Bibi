@@ -21,6 +21,48 @@
 		<section class="welcome"  aria-labelledby="welcome-title">
 				<h1 id="title" class="eyebrow">Impact of Social Media</h1>
 			    <h1 class="eyebrow">Data structure and curation</h1>
+				<p>
+    As a team, we decided to use an existing dataset rather than collect our own data. We quickly identified a dataset that matched our research interests and contained several indicators related to the impact of social media on students. We found and downloaded the dataset from
+    <a href="https://www.kaggle.com/" target="_blank" rel="noopener noreferrer">Kaggle</a>.
+			</p>
+			
+			<p>
+			    We chose the CSV format because our dataset consists of structured tabular data, where each row represents a student and each column represents a specific attribute. CSV stores this information in a simple, flat structure that can be easily imported into spreadsheet software and data analysis tools. Compared with XML, which uses nested tags to describe data and is more suitable for hierarchical or complex structures, CSV is simpler and more convenient for inspecting, cleaning, and preparing our dataset for statistical analysis. Since our research only requires selecting and analysing specific columns, CSV meets our needs without the additional structural complexity of XML.
+			</p>
+			
+			<p>
+			    Our research question is:
+			</p>
+			
+			<p>
+			    <strong>
+			        Which of three social media habits — daily usage duration, late-night usage, or frequency of social comparison — is most strongly associated with perceived stress among students?
+			    </strong>
+			</p>
+			
+			<p>
+			    To prepare the dataset for our analysis, we removed columns that were not relevant to our research question. Since the original dataset contains more than 4,000 rows, we also used spreadsheet tools to check for empty cells and identify potential data errors that might require correction.
+			</p>
+			
+			<p>
+			    We found that the <code>Perceived_Stress_Score</code> column contained 46 empty cells. We removed the rows containing these missing values because the stress score is essential for our analysis. Since the dataset contains more than 4,000 rows, we expect that removing these 46 rows will have a limited impact on the results. We also checked the dataset for duplicate records but did not find any.
+			</p>
+			
+			<p>
+			    After this initial data preparation, we retained the following columns:
+			</p>
+			
+			<ul>
+			    <li><strong>Student_ID</strong> — identifies individual records in the dataset.</li>
+			    <li><strong>Perceived_Stress_Score</strong> — the dependent variable, representing students’ perceived stress levels.</li>
+			    <li><strong>Daily_Usage_Hours</strong> — measures the amount of time students spend on social media each day.</li>
+			    <li><strong>Late_Night_Usage</strong> — indicates whether students use social media late at night.</li>
+			    <li><strong>Social_Comparison_Frequency</strong> — measures how frequently students compare themselves with others on social media.</li>
+			</ul>
+			
+			<p>
+			    We will include both the original dataset and the cleaned dataset in our GitHub repository.
+			</p>
 		</section>
 		<section class="content-section" aria-labelledby="start-title">
 			<h2 id="start-title">Start exploring</h2>
