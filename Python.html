@@ -59,7 +59,18 @@
 	</header>
 
 	<main class="page-content">
-	<session> <h1>test2.py</h1>
+		<section class="welcome" aria-labelledby="dataset-title">
+			<h1 id="title"  class="eyebrow">Impact of Social Media</h1>
+			<h1 id="title"  class="eyebrow">The python resource code</h1>
+			<p>The code is written in python and structured into three functions and the main code: load_records, average_ranks, and correlation_or_none.
+				The load_records function reads the CSV dataset, converts categorical values into numbers, and skips invalid records.
+				The average_ranks function assigns ranks to values and calculates average ranks for tied values. 
+				The correlation_or_none function calculates Pearson correlation when sufficient valid data is available. 
+				Finally, the main program calculates the three correlations between social media habits and perceived stress, displays the results, 
+				and identifies the habit with the strongest observed association by comparing the absolute correlation coefficients.</p>
+			
+		</section>
+	<section> <h1>ImpactOfsocialMedia.py</h1>
   <pre><code id="code"></code></pre>
 
   <script type="text/plain" id="source">import csv
@@ -189,7 +200,7 @@ else:
     html += escaped(source.slice(lastIndex));
     document.getElementById("code").innerHTML = html;
   </script>
- </session>	
+ </section>	
 </main>
  </body>
 </html>
