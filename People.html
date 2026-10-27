@@ -2,48 +2,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description" content="Assignment 2: Design Algorithms">
-	<title>Impact of social Media</title>
-	<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet the Team | The Impact of Social Media on Life</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<header class="site-header">
-		<a class="site-name" href="index.html"> Data logical thinking: Assignment 2 </a>
-		<nav aria-label="Main navigation">
-			<a href="index.html" >Home</a>
-			<a href="dataset.html">Dataset</a>
-			<a href="algorithm.html">Algorithm</a>
-			<a href="People.html" aria-current="page">How we worked</a>
-		</nav>
-	</header>
 
-	<main class="page-content">
-		<section class="welcome" aria-labelledby="welcome-title">
-			<h1 id="title">Impact of Social Media</h1>
-			<p class="eyebrow">How we worked ?</p>
-			<p>Each group member get chance to study the dataset and formulate their own question.... </p>
-		</section>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="dataset.html">Dataset</a>
+            <a href="algorithm.html">Algorithm</a>
+            <a href="People.html" aria-current="page">How We Worked</a>
+        </nav>
+    </header>
 
-		<section class="content-section" aria-labelledby="start-title">
-			<h2 id="start-title">Start exploring</h2>
-			<ul class="link-list">
-				<li><a href="dataset.html">Dataset</a></li>
-				<li><a href="algorithm.html">Algorithm</a></li>
-				<li><a href="People.html"> How we worked</a></li>
-			</ul>
-		</section>
-		<aside class="bulletin" aria-labelledby="bulletin-title">
-      <svg class="bulletin-sketch" viewBox="0 0 400 180" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-        <path class="bulletin-sketch-shadow" d="M12 18 C48 9, 73 14, 108 12 S172 16, 207 11 S275 15, 311 12 S367 11, 388 20 C394 42, 386 58, 390 81 S386 123, 391 151 C369 168, 342 160, 310 166 S248 161, 212 168 S148 162, 112 167 S44 162, 13 169 C7 146, 13 125, 9 102 S14 58, 10 39 C9 30, 10 23, 12 18" />
-        <path d="M9 14 C43 20, 76 8, 111 15 S177 9, 211 14 S276 8, 310 14 S366 7, 391 17 C384 41, 394 62, 388 84 S394 126, 387 153 C362 158, 337 166, 305 160 S244 169, 209 163 S146 170, 109 162 S43 171, 11 164 C17 142, 6 121, 12 98 S6 54, 13 36 C10 27, 14 20, 9 14" />
-      </svg>
-    
-	</main>
+    <main class="page-content">
+        <section class="welcome">
+            <h1>Meet the Team</h1>
 
-	<footer class="site-footer">
-		<p>&copy; 2026  Assignment 2          Tatevik, Mahitab, Bibifatemeh</p>
-	</footer>
+            <h2>Who We Are</h2>
+            <p>
+                We are a team of three students from different educational
+                and professional backgrounds working together on the project
+                “The Impact of Social Media on Life.” Our team consists of
+                Bibifatimeh, Tatevik, and Mahitab. We share a common goal:
+                to develop our logical thinking and data management skills
+                by preparing a structured dataset and developing an algorithm
+                to investigate the relationship between social media habits
+                and perceived stress among students.
+            </p>
+
+            <p>
+                Our different backgrounds allowed us to share knowledge,
+                learn from one another, and approach challenges from
+                different perspectives.
+            </p>
+
+            <h2>Our Team Members</h2>
+            <ul>
+                <li>
+                    <strong>Bibifatimeh, Mathematics Teacher:</strong>
+                    Responsible for developing the algorithm and its
+                    logical structure.
+                </li>
+                <li>
+                    <strong>Tatevik, Future Librarian:</strong>
+                    Proposed the project topic, explored and prepared
+                    the dataset, and proofread our work to improve its
+                    clarity and accuracy.
+                </li>
+                <li>
+                    <strong>Mahitab, Librarian:</strong>
+                    Responsible for creating the index, developing the
+                    People page, and documenting our workflow and
+                    decision making.
+                </li>
+            </ul>
+
+            <p>
+                Although we divided the main responsibilities, we regularly
+                shared our progress, discussed challenges, and supported
+                one another.
+            </p>
+
+            <h2>Choosing Our Topic</h2>
+            <p>
+                Tatevik proposed the topic and shared a starting point for
+                our research. During our meetings, we also considered other
+                ideas, including children's library databases and film
+                databases, before agreeing to focus on social media and
+                student stress. This topic interested us because it allowed
+                us to investigate how different social media habits might
+                be associated with perceived stress.
+            </p>
+
+            <p>Our research question was:</p>
+
+            <blockquote>
+                <em>
+                    Which of three social media habits — daily usage
+                    duration, late night usage, or frequency of social
+                    comparison — is most strongly associated with
+                    perceived stress among students?
+                </em>
+            </blockquote>
+
+            <p>
+                This question guided our selection of relevant variables
+                and helped us establish a clear direction for the project.
+            </p>
+
+            <h2>Exploring and Preparing the Dataset</h2>
+            <p>
+                We chose an existing dataset from Kaggle rather than
+                collecting our own data. We used the CSV format because
+                it allowed us to organize the information into rows and
+                columns and prepare it for analysis. During this stage,
+                we discussed which variables were relevant to our research
+                question, whether to retain the student identification
+                column, and how to handle missing values and possible
+                duplicate records.
+            </p>
+
+            <p>The columns selected for our analysis were:</p>
+
+            <ul>
+                <li><code>Student_ID</code></li>
+                <li><code>Perceived_Stress_Score</code></li>
+                <li><code>Daily_Usage_Hours</code></li>
+                <li><code>Late_Night_Usage</code></li>
+                <li><code>Social_Comparison_Frequency</code></li>
+            </ul>
+
+            <p>
+                These variables represent perceived stress and the three
+                social media habits in our research question. Selecting
+                relevant information helped us organize the dataset around
+                our research goal.
+            </p>
+
+            <h2>Dividing Responsibilities</h2>
+            <p>
+                We assigned responsibilities according to our individual
+                skills and experience. Bibifatimeh focused on the algorithm,
+                Tatevik on the dataset, and Mahitab on the index, People
+                page, and workflow documentation.
+            </p>
+
+            <p>
+                However, we worked collaboratively rather than independently.
+                We exchanged ideas, reviewed each other's work, and helped
+                one another when questions or difficulties arose.
+            </p>
+
+            <h2>Our Meetings and Communication</h2>
+            <p>
+                We met daily to discuss progress, explore different options,
+                and decide on the next steps. We also communicated through
+                WhatsApp, where we shared updates, asked questions, and
+                discussed issues between meetings. Regular communication
+                helped us coordinate our tasks, clarify misunderstandings,
+                and maintain a shared understanding of the project.
+            </p>
+
+            <h2>How We Made Decisions</h2>
+            <p>
+                We discussed important decisions together and considered
+                everyone's opinions. These discussions included selecting
+                relevant dataset variables, deciding which records and
+                columns to retain, and considering how to handle missing
+                values.
+            </p>
+
+            <p>
+                When we disagreed, we discussed the alternatives and worked
+                towards an agreement. When necessary, we voted. Team members
+                with relevant expertise took the lead on specific tasks,
+                while everyone had the opportunity to contribute ideas and
+                feedback. Our approach combined individual responsibility
+                with collaborative decision making.
+            </p>
+
+            <h2>Our Workflow</h2>
+            <ol>
+                <li>
+                    <strong>Choosing the topic:</strong>
+                    We discussed possible ideas and selected social media
+                    and student stress.
+                </li>
+                <li>
+                    <strong>Formulating the research question:</strong>
+                    We identified three social media habits to examine.
+                </li>
+                <li>
+                    <strong>Finding the dataset:</strong>
+                    We selected an existing dataset from Kaggle.
+                </li>
+                <li>
+                    <strong>Preparing the data:</strong>
+                    We discussed relevant variables and the organization
+                    and quality of the dataset.
+                </li>
+                <li>
+                    <strong>Dividing responsibilities:</strong>
+                    We assigned tasks according to our skills and experience.
+                </li>
+                <li>
+                    <strong>Developing the project:</strong>
+                    We worked on the dataset, algorithm, index, and
+                    documentation.
+                </li>
+                <li>
+                    <strong>Reviewing our work:</strong>
+                    We shared feedback, discussed challenges, and made
+                    decisions together.
+                </li>
+            </ol>
+
+            <h2>What We Learned</h2>
+            <p>
+                This project helped us develop our understanding of data
+                curation, algorithm development, teamwork, and problem
+                solving. We learned that preparing a dataset involves
+                making thoughtful decisions about which variables to use
+                and how to organize information. We also learned the
+                importance of communication, mutual support, and
+                recognizing each team member's strengths.
+            </p>
+
+            <p>
+                By combining individual responsibilities with daily
+                meetings and continuous communication through WhatsApp,
+                we worked towards our shared goal and developed the
+                project together. Throughout this process, we kept two
+                core approaches in mind: “learning by doing” and, of
+                course, “practice makes perfect.”
+            </p>
+
+            <p class="team-signature">
+                <em>Tatevik, Bibifatimeh, and Mahitab</em>
+            </p>
+
+            <div class="page-buttons">
+                <a class="button-link" href="index.html">Home</a>
+                <a class="button-link" href="dataset.html">Explore Dataset</a>
+                <a class="button-link" href="algorithm.html">Explore Algorithm</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>The Impact of Social Media on Life</p>
+    </footer>
+
 </body>
 </html>
