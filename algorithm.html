@@ -23,10 +23,12 @@
 		<section class="welcome" aria-labelledby="dataset-title">
 			<h1 id="title"  class="eyebrow">Impact of Social Media</h1>
 			<h1 id="title"  class="eyebrow">The pseudocode</h1>
-			<p>The pseudocode is structured into three main functions: load_records, average_ranks, and correlation_or_none.
-				The load_records function reads the CSV dataset, converts categorical values into numbers, and skips invalid records.
-				The average_ranks function assigns ranks to values and calculates average ranks for tied values. 
-				The correlation_or_none function calculates Pearson correlation when sufficient valid data is available. 
+			<p>The pseudocode is structured into three main functions: load_records, average_ranks, and correlation_or_none. 
+				This structure was chosen to make the algorithm easier to understand, test, and maintain. 
+				The load_records function handles data preparation and validation to ensure that only reliable records are analysed. 
+				The average_ranks function was included because ranking allows variables measured on different scales to be compared fairly and correctly handles tied values.
+				The correlation_or_none function calculates Pearson correlation only when sufficient valid data exists, which helps avoid unreliable results. 
+				Dividing the algorithm into separate functions improves readability and ensures that each function has a clear responsibility.
 				Finally, the main program calculates the three correlations between social media habits and perceived stress, displays the results, 
 				and identifies the habit with the strongest observed association by comparing the absolute correlation coefficients.</p>
 			
