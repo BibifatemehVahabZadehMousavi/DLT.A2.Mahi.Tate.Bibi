@@ -62,48 +62,36 @@
 		    FOR each row in the dataset:
 		
 		        TRY:
-		            CONVERT Perceived_Stress_Score to a number
-		            CONVERT Daily_Usage_Hours to a number
-		            CONVERT Late_Night_Usage to its numeric value
-		            CONVERT Social_Comparison_Frequency
-		                to its numeric value
-		
-		        IF any value is missing, invalid,
-		        or unrecognized:
-		            SKIP the row
-		
-		        OTHERWISE IF any numeric value is not finite:
+		            CONVERT Perceived_Stress_Score to a number and SET it in stress
+		            CONVERT Daily_Usage_Hours to a number and SET it in hours
+		            CONVERT Late_Night_Usage to its numeric value and SET it in late_night
+		            CONVERT Social_Comparison_Frequency to its numeric value and SET it in comparison
+			  
+	        	#Here we checked again the values of each fields before we add them to lists
+		        IF any value is missing, invalid or unrecognized:
 		            SKIP the row
 		
 		        OTHERWISE:
 		            ADD stress, hours, late_night,
-		            and comparison to records
+		            and comparison to lists
 		
-		    RETURN records
+		    RETURN lists
 		
-		
+		#This function is used for the list Late_Night_Usage and Social_Comparison_Frequency when we count for their relation to Perceived_Stress_Score 
 		FUNCTION average_ranks(values):
-		
-		    CREATE a rank list with one position per value
-		    SORT values from smallest to largest
-		    KEEP each value's original position
-		
+		    CREATE list ranks with the same length as values
+		    SORT the positions of values from smallest to largest value
 		    SET start = 0
-		
-		    FOR each group of equal values:
-		
-		        SET group_size to the number of tied values
-		
-		        CALCULATE average_rank:
-		            (start + 1 + start + group_size) / 2
-		
-		        ASSIGN average_rank to each tied value
-		        at its original position
-		
-		        INCREASE start by group_size
-		
-		    RETURN rank list
-		
+		    WHILE start < length of values:
+		        SET group_size = number of equal values starting at start
+		        SET average_rank = (start + 1 + start + group_size) / 2
+		        FOR each position in this group:
+		            SET ranks[position] = average_rank
+		        END FOR
+		        SET start = start + group_size
+		    END WHILE
+		    RETURN ranks
+        END FUNCTION
 		
 		FUNCTION correlation_or_none(x, y):
 		
