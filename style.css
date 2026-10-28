@@ -279,6 +279,19 @@ nav a[aria-current="page"] {
 .site-footer p {
   margin: 0;
 }
+.specific-question {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.pseudocode h2 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+}
+
 .pseudocode {
   max-width: 900px;
   margin: 20px auto;
