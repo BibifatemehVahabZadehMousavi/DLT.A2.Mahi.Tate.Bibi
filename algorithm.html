@@ -98,34 +98,21 @@
 		    RETURN ranks
         END FUNCTION
 
-		# The function corelation_or none calculate the Pearson coefficient, r
+		#The function corelation_or none calculate the Pearson coefficient r
 		FUNCTION correlation_or_none(x, y):
 		    #Each x value must be paired with a y value from the same student
 		    IF x and y have different lengths:
 		        RETURN unavailable
-		    #Pearson divides by the spread of the values; if all values are
-		    #the same (or there is only one value), the spread is 0
 		    IF either list has only one distinct value:
 		        RETURN unavailable
 		    #Use the imported tool to calculate Pearson r (between -1 and 1)
 		    CALCULATE Pearson correlation between x and y
 		    RETURN correlation coefficient
 		END FUNCTION
-		
+
+		#Main program 
+		#Loads all records by calling the function load_records		
 		SET records = load_records(filename)
-		
-		IF records contains fewer than 2 valid rows:
-		
-		    DISPLAY "Not enough valid data."
-		
-		OTHERWISE:
-		
-		    SEPARATE records into:
-		        stress
-		        daily_hours
-		        late_night
-		        comparison
-		
 		    CALCULATE daily_correlation:
 		        correlation between daily_hours and stress
 		
