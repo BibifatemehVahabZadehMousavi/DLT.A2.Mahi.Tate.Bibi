@@ -82,6 +82,7 @@
 		#This function is used for the list Late_Night_Usage and  
 		#Social_Comparison_Frequency when we count for 
 		#their relation to Perceived_Stress_Score 
+			  
 		FUNCTION average_ranks(values):
 		    CREATE list ranks with the same length as values
 		    SORT the positions of values from smallest to largest value
@@ -96,9 +97,8 @@
 		    END WHILE
 		    RETURN ranks
         END FUNCTION
-				
-		#Pearson divides by the spread of the values; if all values are 
-		#		
+
+		# The function corelation_or none calculate the Pearson coefficient, r
 		FUNCTION correlation_or_none(x, y):
 		    #Each x value must be paired with a y value from the same student
 		    IF x and y have different lengths:
