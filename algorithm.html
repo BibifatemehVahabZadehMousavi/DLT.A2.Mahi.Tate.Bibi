@@ -115,7 +115,7 @@
 				
 		SET records = load_records(filename)
         #Here calculates all correlations 
-				
+			
 	    #1. calculate correlation between Daily_Usage_Hours and Perceived_Stress_Score
 		SET r1=correlation_or_none(Daily_Usage_Hours, Perceived_Stress_Score)
 				
@@ -128,32 +128,21 @@
 		SET r3=average_ranks(A2,Perceived_Stress_Score)
 		
 	
-		
+		# Here display all correlation 
 		DISPLAY number of valid students
 	    DISPLAY all three correlation coefficients
-		
+
+		# Calculates the strongest correlation
 	    CREATE a list available to sort the coefficients
 		
 	    FOR each correlation coefficient:
-			IF the coefficient is available:
-		        ADD its position and value to available
+			FIND the coefficient with the largest absolute value
+
+		#  Display the strongest correlation 
+		DISPLAY the strongest observed association
+	    DISPLAY its coefficient rounded to 3 decimals
 		
-		    IF available is empty:
-		
-		        DISPLAY "Could not calculate the correlations."
-		
-		    OTHERWISE:
-		
-		        FIND the coefficient with the largest
-		        absolute value
-		
-		        IDENTIFY the corresponding social media habit
-		
-		        DISPLAY the strongest observed association
-		        DISPLAY its coefficient rounded to 3 decimals
-		
-		        DISPLAY "Correlation shows association,
-		        not causation."
+		DISPLAY "Correlation shows association, not causation."
 		
 		END</code></pre>
 		</section>
