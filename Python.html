@@ -49,10 +49,11 @@
 		<section class="welcome" aria-labelledby="dataset-title">
 			<h1 id="title"  class="eyebrow">Impact of Social Media</h1>
 			<h1 id="title"  class="eyebrow">The python resource code</h1>
-			<p>The code is written in python and structured into three functions and the main code: load_records, average_ranks, and correlation_or_none.
+			<p>The code is written in python and structured into the main code and three functions: load_records, average_ranks, and correlation_or_none.
 				The load_records function reads the CSV dataset, converts categorical values into numbers, and skips invalid records.
 				The average_ranks function assigns ranks to values and calculates average ranks for tied values. 
-				The correlation_or_none function calculates Pearson correlation when sufficient valid data is available. 
+				It is used to those attributes that have words instead of numbers.
+				The correlation_or_none function calculates Pearson correlation. 
 				Finally, the main program calculates the three correlations between social media habits and perceived stress, displays the results, 
 				and identifies the habit with the strongest observed association by comparing the absolute correlation coefficients.</p>
 			
@@ -65,9 +66,10 @@ import math
 import statistics
 from itertools import groupby
 
+# Define variables for file path  
+filename = r"\Data\Social_media_impact_on_life.csv"
 
-filename = r"C:\Users\Leila\Desktop\archive\Social_media_impact_on_life.csv"
-
+# create dictionary list and associate numbers to the values for Social_Comparison_Frequency
 comparison_codes = {
     "never": 1,
     "rarely": 2,
@@ -75,6 +77,7 @@ comparison_codes = {
     "often": 4,
     "always": 5,
 }
+# create dictionary list and associate numbers to the values for Late_Night_Usage attribute
 late_night_codes = {
     "true": 1,
     "yes": 1,
@@ -84,7 +87,8 @@ late_night_codes = {
     "0": 0,
 }
 
-
+	  
+#The load_records function reads the CSV dataset, converts categorical values into numbers, and skips invalid records
 def load_records(path):
     records = []
     with open(path, encoding="utf-8-sig", newline="") as file:
@@ -102,7 +106,8 @@ def load_records(path):
 
     return records
 
-
+#The average_ranks function assigns ranks to values and calculates average ranks for tied values. 
+# It uses two times for two attributes Social_Comparison_Frequency and Late_Night_Usage from the dataset
 def average_ranks(values):
     ranked = [0.0] * len(values)
     ordered = sorted(enumerate(values), key=lambda item: item[1])
@@ -116,35 +121,44 @@ def average_ranks(values):
         start += len(tied_values)
 
     return ranked
-
-
+#The correlation_or_none function calculates Pearson correlation. 
+# It uses three times to Calcultae three correlations: 1) Daily_Usage_Hours and Perceived_Stress_Score
+# 2)Late_Night_Usage and Perceived_Stress_Score,  3) Social_Comparison_Frequency and Perceived_Stress_Score
+	  
 def correlation_or_none(x, y):
     if len(x) < 2 or len(set(x)) < 2 or len(set(y)) < 2:
         return None
     return statistics.correlation(x, y)
 
-
+	  
+#the main program calculates the three correlations between social media habits and perceived stress,
+#displays the results
+#Main program			
 records = load_records(filename)
 
 if len(records) < 2:
     print("Not enough valid data.")
 else:
+	# Create a dictionary list and add three correlation coefficients to it.
     stress, daily_hours, late_night, comparison = map(list, zip(*records))
     correlations = [
         correlation_or_none(daily_hours, stress),
-        correlation_or_none(late_night, stress),
-        correlation_or_none(average_ranks(comparison), average_ranks(stress)),
+        correlation_or_none(average_ranks(late_night), stress),
+        correlation_or_none(average_ranks(comparison), stress),
     ]
     names = [
         "Daily usage Hours",
         "Late-night usage",
         "Social comparison frequency",
     ]
-
+	#Display the number of records(students)
     print("Valid students:", len(records))
     print()
+    print("Below shows three correlation's coefficients")
+	print()
+	# Display all correlation values 
     for name, value in zip(
-        ("Daily usage duration", "Late-night usage", "Social comparison frequency"),
+        ("Daily usage Hour", "Late-night usage", "Social comparison frequency"),
         correlations,
     ):
         print(f"{name}: {value}")
@@ -154,7 +168,8 @@ else:
         for index, value in enumerate(correlations)
         if value is not None and math.isfinite(value)
     ]
-    if not available:
+	# If statement is to find the maximum Correlation's value between three correlation that find in the program
+	if not available:
         print("Could not calculate the correlations.")
     else:
         best_index, best_value = max(available, key=lambda item: abs(item[1]))
