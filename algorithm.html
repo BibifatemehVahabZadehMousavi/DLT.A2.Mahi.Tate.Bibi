@@ -35,21 +35,24 @@
 		  <h2>Pseudocode: Social Media Habits and Perceived Stress
 		 </h2>
 		  <pre><code>START
-		
+		#SET CSV file path to a variable
 		SET filename to the CSV dataset path
-		
-		CREATE comparison_codes:
+        
+		#ASIGN to each text for Social_Comparison_Frequency a number
+			    
+		CREATE Social_Comparison_Frequency:
 		    "never" = 1
 		    "rarely" = 2
 		    "sometimes" = 3
 		    "frequently" = 4
 		    "always" = 5
-		
+			  
+		#ASIGN to each text for Late_Night_Usage a number
 		CREATE late_night_codes:
 		    "true", "yes", "1" = 1
 		    "false", "no", "0" = 0
 		
-		
+		#The load_records function creates all lists for the dataset, converts the values to numbers, checks for missing or invalid values, and then adds the values to the lists.
 		FUNCTION load_records(filename):
 		
 		    CREATE empty list records
@@ -181,7 +184,7 @@
 			<ul class="link-list">
 				<li><a href="dataset.html">Dataset</a></li>
 				<li><a href="algorithm.html">Algorithm</a></li>
-				<li><a href="People.html">To know how we worked</a></li>
+				<li><a href="People.html">About us</a></li>
 			</ul>
 		</section>
 		
