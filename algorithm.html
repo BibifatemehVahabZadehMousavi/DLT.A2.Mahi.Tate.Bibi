@@ -115,11 +115,18 @@
 				
 		SET records = load_records(filename)
         #Here calculates all correlations 
+				
 	    #1. calculate correlation between Daily_Usage_Hours and Perceived_Stress_Score
 		SET r1=correlation_or_none(Daily_Usage_Hours, Perceived_Stress_Score)
-	    SET r2=average_ranks(Late_Night_Usage, Perceived_Stress_Score) 
-		SET r3=average_ranks(Social_Comparison_Frequency,Perceived_Stress_Score)
-		SET 
+				
+		#2. calculate average rank and correlation between Late_Night_Usage and Perceived_Stress_Score			
+	    SET A1=average_ranks(Late_Night_Usage)
+		SET r2= correlation_or_none(A1, Perceived_Stress_Score) 
+				
+		#3. calculate average rank and correlation between Social_Comparison_Frequency and Perceived_Stress_Score		
+		SET A2=	average_ranks(Social_Comparison_Frequency)
+		SET r3=average_ranks(A2,Perceived_Stress_Score)
+		
 		
 
 		CALCULATE stress_ranks:
