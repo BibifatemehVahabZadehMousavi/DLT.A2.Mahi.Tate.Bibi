@@ -113,32 +113,29 @@
 		#Main program 
 		#Loads all records by calling the function load_records		
 		SET records = load_records(filename)
-		    CALCULATE daily_correlation:
-		        correlation between daily_hours and stress
+		CALCULATE daily_correlation:
+	        correlation between daily_hours and stress
 		
-		    CALCULATE late_night_correlation:
-		        correlation between late_night and stress
+	    CALCULATE late_night_correlation:
+			correlation between late_night and stress
 		
-		    CALCULATE comparison_ranks:
-		        average_ranks(comparison)
+		CALCULATE comparison_ranks:
+		    average_ranks(comparison)
 		
-		    CALCULATE stress_ranks:
-		        average_ranks(stress)
+		CALCULATE stress_ranks:
+	        average_ranks(stress)
 		
-		    CALCULATE comparison_correlation:
-		        correlation between comparison_ranks
-		        and stress_ranks
+	    CALCULATE comparison_correlation:
+			correlation between comparison_ranks and stress_ranks
 		
-		    DISPLAY number of valid students
-		    DISPLAY all three correlation coefficients
+		DISPLAY number of valid students
+	    DISPLAY all three correlation coefficients
 		
-		    CREATE empty list available
+	    CREATE a list available to sort the coefficients
 		
-		    FOR each correlation coefficient:
-		
-		        IF the coefficient is available
-		        AND finite:
-		            ADD its position and value to available
+	    FOR each correlation coefficient:
+			IF the coefficient is available:
+		        ADD its position and value to available
 		
 		    IF available is empty:
 		
