@@ -52,7 +52,8 @@
 		    "true", "yes", "1" = 1
 		    "false", "no", "0" = 0
 		
-		#The load_records function creates all lists for the dataset, converts the values to numbers, 
+		#The load_records function creates all lists for the dataset, 
+		#converts the values to numbers, 
 		#checks for missing or invalid values, and then adds the values to the lists.
 		FUNCTION load_records(filename):
 		
@@ -78,8 +79,9 @@
 		
 		    RETURN lists
 		
-		#This function is used for the list Late_Night_Usage and Social_Comparison_Frequency 
-		#when we count for their relation to Perceived_Stress_Score 
+		#This function is used for the list Late_Night_Usage and  
+		#Social_Comparison_Frequency when we count for 
+		#their relation to Perceived_Stress_Score 
 		FUNCTION average_ranks(values):
 		    CREATE list ranks with the same length as values
 		    SORT the positions of values from smallest to largest value
@@ -94,19 +96,21 @@
 		    END WHILE
 		    RETURN ranks
         END FUNCTION
-		
+				
+		#Pearson divides by the spread of the values; if all values are 
+		#		
 		FUNCTION correlation_or_none(x, y):
-		
-		    IF either list has fewer than 2 values:
+		    #Each x value must be paired with a y value from the same student
+		    IF x and y have different lengths:
 		        RETURN unavailable
-		
+		    #Pearson divides by the spread of the values; if all values are
+		    #the same (or there is only one value), the spread is 0
 		    IF either list has only one distinct value:
 		        RETURN unavailable
-		
+		    #Use the imported tool to calculate Pearson r (between -1 and 1)
 		    CALCULATE Pearson correlation between x and y
-		
 		    RETURN correlation coefficient
-		
+		END FUNCTION
 		
 		SET records = load_records(filename)
 		
