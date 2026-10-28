@@ -52,7 +52,8 @@
 		    "true", "yes", "1" = 1
 		    "false", "no", "0" = 0
 		
-		#The load_records function creates all lists for the dataset, converts the values to numbers, checks for missing or invalid values, and then adds the values to the lists.
+		#The load_records function creates all lists for the dataset, converts the values to numbers, 
+		#checks for missing or invalid values, and then adds the values to the lists.
 		FUNCTION load_records(filename):
 		
 		    CREATE empty list records
@@ -77,7 +78,8 @@
 		
 		    RETURN lists
 		
-		#This function is used for the list Late_Night_Usage and Social_Comparison_Frequency when we count for their relation to Perceived_Stress_Score 
+		#This function is used for the list Late_Night_Usage and Social_Comparison_Frequency 
+		#when we count for their relation to Perceived_Stress_Score 
 		FUNCTION average_ranks(values):
 		    CREATE list ranks with the same length as values
 		    SORT the positions of values from smallest to largest value
