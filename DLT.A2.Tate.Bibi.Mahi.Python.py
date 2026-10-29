@@ -5,7 +5,7 @@ from itertools import groupby
 
 # Define variables for file path  
 #Please change the path to your own path where the dataset is stored in your computer
-filename = r"C:\Users\Leila\Desktop\archive\Social_media_impact_on_life.csv"
+filename = r"Cleaned dataset.csv"
 
 # create dictionary list and associate numbers to the values for Social_Comparison_Frequency
 comparison_codes = {
